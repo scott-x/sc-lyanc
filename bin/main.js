@@ -1,3 +1,5 @@
+var xhr = require('xhr');
+
 module.exports={
 	run:function(generator){
 		var data = null, yielded = false
@@ -16,5 +18,14 @@ module.exports={
 				yielded=!!(iterator.next(item))
 			}
 		}
+	},
+	fetch:function(uri){
+        return new Promise(function(resolve, reject){
+    		xhr(uri, function(err, res, body){
+    			if (err) return reject(err);
+    			if (res.statusCode!==200) return reject(new Error(body))
+    			resolve(body)
+    		})
+        })
 	}
 }
