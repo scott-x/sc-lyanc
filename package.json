@@ -1,0 +1,25 @@
+{
+  "name": "sc-lyanc",
+  "version": "1.0.0",
+  "description": "utils for node.js",
+  "main": "./bin/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scott-x/sc-lyanc.git"
+  },
+  "keywords": [
+    "utils",
+    "node",
+    "nodejs",
+    "scottxiong"
+  ],
+  "author": "Scott Xiong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scott-x/sc-lyanc/issues"
+  },
+  "homepage": "https://github.com/scott-x/sc-lyanc#readme"
+}
