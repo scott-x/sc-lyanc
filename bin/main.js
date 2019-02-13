@@ -35,7 +35,8 @@ module.exports={
 	  arg file
 	*/
 	doAsync:async function(fn,arg){
-	let result = await util.promisify(fn)(arg)
-	console.log(result)
-        }
+	  let result = await util.promisify(fn)(arg)
+	  console.log(result)
+	  return result;
+    }
 }
