@@ -1,4 +1,5 @@
 var xhr = require('xhr');
+var util = requrie('util');
 
 module.exports={
 	run:function(generator){
@@ -27,5 +28,14 @@ module.exports={
     			resolve(body)
     		})
         })
-	}
+	},
+	//util的promisify可以将cb包装成promise, async function await 的就是个promise
+	/*
+	  fn 类似于fs.readFile(file,(err,data){})
+	  arg file
+	*/
+	doAsync:async function(fn,arg){
+	let result = await util.promisify(fn)(arg)
+	console.log(result)
+        }
 }
