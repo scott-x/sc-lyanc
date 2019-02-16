@@ -1,5 +1,5 @@
 var xhr = require('xhr');
-var util = requrie('util');
+var util = require('util');
 
 module.exports={
 	run:function(generator){
